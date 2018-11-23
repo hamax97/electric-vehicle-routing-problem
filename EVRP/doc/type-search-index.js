@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"evrp","l":"EVRP"},{"p":"evrp","l":"Graph"},{"p":"evrp","l":"GraphAL"},{"p":"evrp","l":"Node"},{"p":"evrp","l":"Successor"}]

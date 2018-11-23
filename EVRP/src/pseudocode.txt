@@ -1,0 +1,51 @@
+TSP(Grafo g){
+
+   depot = g[0];
+   sucesoresDepot = obtenerSucesores(depot)
+   
+   caminoActual.add(depot)
+   visitados[depot] = 1
+
+   for(i = 0, i < sucesoresDepot.size, i += 1){
+      nodoActual = obtenerSucesorMasCercano( sucesoresDepot )
+
+      if( noVisitado(nodoActual)){
+      
+         caminoActual.add( nodoActual )
+	 if(puedo ir a nodoActual y volver a depot)
+
+            probarCamino( nodoActual )
+	    
+	 else
+            print "NODO INALCANZABLE"
+      }else continue
+
+      print "Ruta " + i + caminoActual
+      
+      borrarCaminoActual
+   }
+}
+
+probarCamino(nodoActual){
+
+   if( ultimo nodo agregado es igual al depot)
+      return
+
+   sucesoresNodoActual = obtenerSucesores( nodoActual )
+
+   for(i = 0, i < sucesoresNodoActual.size, i += 1){
+      siguienteNodo = obtenerSucesorMasCercano( sucesoresNodoActual )
+      
+      if( noVisitado( siguienteNodo )){
+      
+         caminoActual.add( siguienteNodo )
+	 if( puedo ir a siguienteNodo y volver a depot ){
+
+            probarCamino( siguienteNodo )
+	    
+	 }else{
+	    caminoActual.add( depot )
+	    break
+	 }
+   }
+}
